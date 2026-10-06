@@ -1,0 +1,1577 @@
+{
+  "root": {
+    "title": "Honda Seguros",
+    "message": "Olá! Sou o assistente virtual da Honda Seguros. De qual produto gostaria de falar?",
+    "options": [
+      {
+        "label": "Cotação",
+        "next": "cotacao"
+      },
+      {
+        "label": "PPE",
+        "next": "ppe"
+      },
+      {
+        "label": "Status da proposta",
+        "next": "status_proposta"
+      },
+      {
+        "label": "Proposta",
+        "next": "proposta"
+      },
+      {
+        "label": "Usuário",
+        "next": "usuario"
+      },
+      {
+        "label": "Seguradoras",
+        "next": "seguradoras"
+      },
+      {
+        "label": "Produtos",
+        "next": "produtos"
+      },
+      {
+        "label": "Telefones e canais",
+        "next": "telefones"
+      },
+      {
+        "label": "Problemas Técnicos",
+        "next": "problemas_tecnicos"
+      },
+      {
+        "label": "Campanhas",
+        "next": "campanhas"
+      },
+      {
+        "label": "Links úteis",
+        "next": "links_uteis"
+      },
+      {
+        "label": "Falar com o atendente",
+        "next": "fale_atendente"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cotacao": {
+    "title": "Cotação",
+    "message": "Qual dúvida você tem sobre a cotação?",
+    "options": [
+      {
+        "label": "Não concluo a cotação",
+        "next": "cot_nao_concluo"
+      },
+      {
+        "label": "FIPE/Molicar não encontrada",
+        "next": "cot_fipe"
+      },
+      {
+        "label": "Chassi, placa, ano ou modelo",
+        "next": "cot_chassi"
+      },
+      {
+        "label": "Condutor, perfil ou uso",
+        "next": "cot_condutor"
+      },
+      {
+        "label": "Veículo 0km ou seminovo",
+        "next": "cot_0km"
+      },
+      {
+        "label": "Endereço ou perfil",
+        "next": "cot_endereco"
+      },
+      {
+        "label": "Forma de pagamento",
+        "next": "cot_pagamento"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_nao_concluo": {
+    "title": "Não concluo a cotação",
+    "message": "Vamos conferir a cotação:\n• Dados do segurado e contatos válidos;\n• Veículo, CEP, perfil e cobertura preenchidos;\n• Vigência atual ou futura;\n• Críticas exibidas por todas as seguradoras.\n\nEstá tudo correto?",
+    "options": [
+      {
+        "label": "Sim, recalcular",
+        "next": "cot_teleport"
+      },
+      {
+        "label": "Não, corrigir",
+        "next": "cot_teleport"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_teleport": {
+    "title": "Confira no Teleport",
+    "message": "• Nome, CPF, telefone e e-mail;\n• Veículo, CEP, cobertura e perfil;\n• Modelo, versão, combustível, ano e chassi conforme o documento;\n• Vigência atual ou futura — seguro retroativo não é permitido;\n• Apenas o item que será contratado.\n\nCorrigiu os dados?",
+    "options": [
+      {
+        "label": "Sim, recalcular",
+        "next": "cot_dados_corretos"
+      },
+      {
+        "label": "Não",
+        "next": "cot_dados_corretos"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_dados_corretos": {
+    "title": "Verificação final",
+    "message": "Os dados estão corretos?",
+    "options": [
+      {
+        "label": "Sim",
+        "next": "cot_final_sim"
+      },
+      {
+        "label": "Não",
+        "next": "cot_final_nao"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_final_sim": {
+    "title": "Cotação",
+    "message": null,
+    "options": [
+      {
+        "label": "Abrir Problemas Técnicos",
+        "next": "problemas_tecnicos"
+      }
+    ],
+    "final": "Salve, recalcule e prossiga.",
+    "note": "Se a crítica continuar após a correção, registre a mensagem e escolha “Problemas Técnicos”."
+  },
+  "cot_final_nao": {
+    "title": "Cotação",
+    "message": null,
+    "options": [
+      {
+        "label": "Abrir Problemas Técnicos",
+        "next": "problemas_tecnicos"
+      }
+    ],
+    "final": "Corrija antes de calcular novamente.",
+    "note": "Se a crítica continuar após a correção, registre a mensagem e escolha “Problemas Técnicos”."
+  },
+  "cot_fipe": {
+    "title": "FIPE/Molicar não encontrada",
+    "message": "Confira no documento o código FIPE, ano de fabricação, ano-modelo, versão, combustível e descrição. Se disponível, pesquise também pelo chassi.\n\nO veículo foi localizado?",
+    "options": [
+      {
+        "label": "Sim",
+        "next": "cot_fipe_sim"
+      },
+      {
+        "label": "Não",
+        "next": "cot_fipe_nao"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_fipe_sim": {
+    "title": "Veículo localizado",
+    "message": null,
+    "options": [
+      {
+        "label": "Abrir Problemas Técnicos",
+        "next": "problemas_tecnicos"
+      }
+    ],
+    "final": "Selecione a versão do documento e recalcule.",
+    "note": "Se o veículo existir na referência, mas não no Teleport, registre a divergência em “Problemas Técnicos”."
+  },
+  "cot_fipe_nao": {
+    "title": "Veículo não localizado",
+    "message": null,
+    "options": [
+      {
+        "label": "Abrir Problemas Técnicos",
+        "next": "problemas_tecnicos"
+      }
+    ],
+    "final": "Consulte pelo chassi e valide a referência disponível.",
+    "note": "Se o veículo existir na referência, mas não no Teleport, registre a divergência em “Problemas Técnicos”."
+  },
+  "cot_chassi": {
+    "title": "Chassi, placa, ano ou modelo",
+    "message": "Use a nota fiscal para veículo 0km ou o CRLV para veículo emplacado. Confira chassi, placa, fabricação, ano-modelo, versão, combustível e código FIPE. Salve e recalcule.\n\nA crítica continua?",
+    "options": [
+      {
+        "label": "Sim",
+        "next": "problemas_tecnicos"
+      },
+      {
+        "label": "Não",
+        "next": "cot_chassi_ok"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_chassi_ok": {
+    "title": "Cotação",
+    "message": null,
+    "options": [],
+    "final": "Ótimo! A cotação segue normalmente.",
+    "note": null
+  },
+  "cot_condutor": {
+    "title": "Condutor, perfil ou uso",
+    "message": "Qual é o uso do veículo?",
+    "options": [
+      {
+        "label": "Particular",
+        "next": "cot_particular"
+      },
+      {
+        "label": "Comercial",
+        "next": "cot_comercial"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_particular": {
+    "title": "Particular",
+    "message": "Informe o principal condutor, CEP de residência, pernoite e circulação.\n\nO perfil representa o uso real?",
+    "options": [
+      {
+        "label": "Sim, continuar",
+        "next": "cot_perfil_ok"
+      },
+      {
+        "label": "Não, corrigir",
+        "next": "cot_perfil_corrigir"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_comercial": {
+    "title": "Comercial",
+    "message": "Selecione a atividade real e informe pernoite e região de atuação.\n\nO perfil representa o uso real?",
+    "options": [
+      {
+        "label": "Sim, continuar",
+        "next": "cot_perfil_ok"
+      },
+      {
+        "label": "Não, corrigir",
+        "next": "cot_perfil_corrigir"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_perfil_ok": {
+    "title": "Perfil confirmado",
+    "message": null,
+    "options": [],
+    "final": "Perfil confirmado. Prossiga com a cotação.",
+    "note": null
+  },
+  "cot_perfil_corrigir": {
+    "title": "Corrigir perfil",
+    "message": null,
+    "options": [],
+    "final": "Corrija o perfil antes de prosseguir com a cotação.",
+    "note": null
+  },
+  "cot_0km": {
+    "title": "Veículo 0km ou seminovo",
+    "message": "Informe a data de saída da concessionária e ajuste a vigência. A vigência pode ser futura, mas não anterior à contratação.\n\nO veículo já saiu da concessionária?",
+    "options": [
+      {
+        "label": "Sim",
+        "next": "cot_0km_detalhe"
+      },
+      {
+        "label": "Não",
+        "next": "cot_0km_detalhe"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_0km_detalhe": {
+    "title": "Condição do veículo",
+    "message": "Escolha a condição do veículo:",
+    "options": [
+      {
+        "label": "0KM",
+        "next": "cot_0km_info"
+      },
+      {
+        "label": "Seminovo",
+        "next": "cot_seminovo_info"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_0km_info": {
+    "title": "0KM",
+    "message": "Confira nota fiscal, chassi, versão, ano, valor, saída e vigência. Valide a regra vigente de enquadramento por prazo e quilometragem.\n\nOs dados estão corretos?",
+    "options": [
+      {
+        "label": "Sim, calcular",
+        "next": "cot_0km_ok"
+      },
+      {
+        "label": "Não, corrigir",
+        "next": "cot_0km_corrigir"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_seminovo_info": {
+    "title": "Seminovo",
+    "message": "Informe a saída e a vigência. A seguradora pode solicitar vistoria.\n\nOs dados estão corretos?",
+    "options": [
+      {
+        "label": "Sim, calcular",
+        "next": "cot_0km_ok"
+      },
+      {
+        "label": "Não, corrigir",
+        "next": "cot_0km_corrigir"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_0km_ok": {
+    "title": "Cotação",
+    "message": null,
+    "options": [],
+    "final": "Calcule a cotação normalmente.",
+    "note": null
+  },
+  "cot_0km_corrigir": {
+    "title": "Cotação",
+    "message": null,
+    "options": [],
+    "final": "Corrija os dados antes de calcular.",
+    "note": null
+  },
+  "cot_endereco": {
+    "title": "Endereço ou perfil",
+    "message": "Pessoa estrangeira / Endereço ou perfil:\nSolicite o documento disponível e preencha os dados obrigatórios: nome, identificação, e-mail, telefone, CEP e profissão. Inclua o condutor quando aplicável.\n\nO sistema impediu o cadastro?",
+    "options": [
+      {
+        "label": "Sim, abrir chamado",
+        "next": "problemas_tecnicos"
+      },
+      {
+        "label": "Não, continuar",
+        "next": "cot_endereco_ok"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "cot_endereco_ok": {
+    "title": "Cadastro",
+    "message": null,
+    "options": [],
+    "final": "Continue o preenchimento da cotação normalmente.",
+    "note": null
+  },
+  "cot_pagamento": {
+    "title": "Forma de pagamento",
+    "message": "BOLETO: Disponível após a emissão; considere até 5 dias para a primeira parcela; demais vencimentos seguem a data disponível.\n\nDÉBITO: Confirme os bancos aceitos.\n\nCARTÃO: Não use cartão provisório; confirme bandeira e regra da seguradora. Allianz e HDI: fluxo enviado ao cliente por e-mail. Tokio Marine, Porto e Suhai: preenchimento no multicálculo.\n\nSelecione a seguradora para ver as condições detalhadas:",
+    "options": [
+      {
+        "label": "Allianz",
+        "next": "pag_allianz"
+      },
+      {
+        "label": "HDI",
+        "next": "pag_hdi"
+      },
+      {
+        "label": "Porto Seguro",
+        "next": "pag_porto"
+      },
+      {
+        "label": "Suhai",
+        "next": "pag_suhai"
+      },
+      {
+        "label": "Tokio Marine",
+        "next": "pag_tokio"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "pag_allianz": {
+    "title": "Allianz — Pagamento",
+    "message": null,
+    "options": [],
+    "final": "• Boleto: até 4x sem juros;\n• Débito em conta: até 10x sem juros;\n• Cartão: até 10x sem juros.\n\nBandeiras e bancos aceitos devem ser confirmados na lista vigente antes da contratação.",
+    "note": null
+  },
+  "pag_hdi": {
+    "title": "HDI — Pagamento",
+    "message": null,
+    "options": [],
+    "final": "• Boleto: 1x sem juros; 2x a 10x com juros;\n• Débito: até 6x sem juros; 7x a 10x com juros;\n• Cartão: até 10x sem juros;\n• PIX: indisponível.\n\nBandeiras aceitas devem ser confirmadas na lista vigente.",
+    "note": null
+  },
+  "pag_porto": {
+    "title": "Porto Seguro — Pagamento",
+    "message": null,
+    "options": [],
+    "final": "• Boleto: parcelamento com juros;\n• Débito: até 10x sem juros;\n• Cartão: até 10x sem juros.\n\nO cartão Porto do segurado pode ter condição específica. Confirme bandeiras, bancos, desconto e impacto no limite na regra vigente antes de contratar.",
+    "note": null
+  },
+  "pag_suhai": {
+    "title": "Suhai — Pagamento",
+    "message": null,
+    "options": [],
+    "final": "• Boleto: até 3x sem juros;\n• Débito em conta: não disponível;\n• Cartão: não disponível.\n\nConfirme a condição vigente antes da contratação.",
+    "note": null
+  },
+  "pag_tokio": {
+    "title": "Tokio Marine — Pagamento",
+    "message": null,
+    "options": [],
+    "final": "• Boleto: até 4x sem juros;\n• Débito: até 5x sem juros;\n• Cartão: até 12x sem juros.\n\nPode haver débito especial para bancos elegíveis. Confirme bandeiras, bancos e condições na regra vigente antes de contratar.",
+    "note": null
+  },
+  "ppe": {
+    "title": "PPE",
+    "message": "Status e prazo da análise PPE. O cálculo PPE é identificado automaticamente na transmissão. Use o status do Teleport como referência.",
+    "options": [
+      {
+        "label": "✅ Liberado",
+        "next": "ppe_liberado"
+      },
+      {
+        "label": "⚠️ Em análise",
+        "next": "ppe_analise"
+      },
+      {
+        "label": "❌ Recusado",
+        "next": "ppe_recusado"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "ppe_liberado": {
+    "title": "✅ Liberado",
+    "message": null,
+    "options": [],
+    "final": "Prossiga com a transmissão, informe o pagamento e conclua a contratação.",
+    "note": null
+  },
+  "ppe_analise": {
+    "title": "⚠️ Em análise",
+    "message": null,
+    "options": [],
+    "final": "Aguarde a atualização no Teleport. Não abra chamado enquanto a análise estiver em andamento.",
+    "note": null
+  },
+  "ppe_recusado": {
+    "title": "❌ Recusado",
+    "message": null,
+    "options": [],
+    "final": "A proposta não foi aprovada. O motivo não fica disponível para consulta e não é necessário abrir chamado para questionar o resultado.\n\nMensagem sugerida ao cliente:\n“A proposta não foi aprovada para continuidade. O motivo da recusa não está disponível para consulta.”",
+    "note": "As comunicações sobre PPE são direcionadas à concessionária."
+  },
+  "status_proposta": {
+    "title": "Status da proposta",
+    "message": "Confira o status no Teleport. Qual status aparece?",
+    "options": [
+      {
+        "label": "🟢 Verde",
+        "next": "status_verde"
+      },
+      {
+        "label": "🟢🟡 Verde/Amarelo",
+        "next": "status_verde_amarelo"
+      },
+      {
+        "label": "🔵 Azul",
+        "next": "status_azul"
+      },
+      {
+        "label": "🟡 Amarelo",
+        "next": "status_amarelo"
+      },
+      {
+        "label": "🔴 Vermelho",
+        "next": "status_vermelho"
+      },
+      {
+        "label": "🟣🟡 Roxo/Amarelo",
+        "next": "status_roxo_amarelo"
+      },
+      {
+        "label": "🟣 Roxo",
+        "next": "status_roxo"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "status_verde": {
+    "title": "🟢 Verde",
+    "message": null,
+    "options": [],
+    "final": "Cálculo fechado.",
+    "note": null
+  },
+  "status_verde_amarelo": {
+    "title": "🟢🟡 Verde/Amarelo",
+    "message": null,
+    "options": [],
+    "final": "Fechado, assinatura enviada e pendente.",
+    "note": null
+  },
+  "status_azul": {
+    "title": "🔵 Azul",
+    "message": null,
+    "options": [],
+    "final": "Pré-transmissão.",
+    "note": null
+  },
+  "status_amarelo": {
+    "title": "🟡 Amarelo",
+    "message": null,
+    "options": [],
+    "final": "Em andamento.",
+    "note": null
+  },
+  "status_vermelho": {
+    "title": "🔴 Vermelho",
+    "message": null,
+    "options": [],
+    "final": "Não fechado e agendado.",
+    "note": null
+  },
+  "status_roxo_amarelo": {
+    "title": "🟣🟡 Roxo/Amarelo",
+    "message": null,
+    "options": [],
+    "final": "Consultando protocolo.",
+    "note": null
+  },
+  "status_roxo": {
+    "title": "🟣 Roxo",
+    "message": null,
+    "options": [],
+    "final": "Allianz com validação do cartão pendente.",
+    "note": null
+  },
+  "proposta": {
+    "title": "Proposta",
+    "message": "O que você deseja consultar sobre a proposta?",
+    "options": [
+      {
+        "label": "Não consigo transmitir",
+        "next": "prop_nao_transmite"
+      },
+      {
+        "label": "Proposta em análise",
+        "next": "prop_em_analise"
+      },
+      {
+        "label": "Aguardando protocolo",
+        "next": "prop_aguardando_protocolo"
+      },
+      {
+        "label": "Proposta duplicada",
+        "next": "prop_duplicada"
+      },
+      {
+        "label": "Problema com assinatura",
+        "next": "prop_assinatura"
+      },
+      {
+        "label": "Apólice ou boleto não gerado",
+        "next": "prop_apolice"
+      },
+      {
+        "label": "Proposta não aparece no Teleport",
+        "next": "prop_nao_aparece"
+      },
+      {
+        "label": "Cancelar proposta",
+        "next": "prop_cancelar"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "prop_nao_transmite": {
+    "title": "Não consigo transmitir",
+    "message": "Leia a crítica de transmissão e corrija o campo indicado. Confira veículo, perfil, CEP, cobertura e pagamento e tente novamente.\n\nA crítica continua com os dados corretos?",
+    "options": [
+      {
+        "label": "Sim, abrir suporte",
+        "next": "problemas_tecnicos"
+      },
+      {
+        "label": "Não, transmitir",
+        "next": "prop_transmitir_ok"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "prop_transmitir_ok": {
+    "title": "Transmissão",
+    "message": null,
+    "options": [],
+    "final": "Prossiga com a transmissão normalmente.",
+    "note": null
+  },
+  "prop_em_analise": {
+    "title": "Proposta em análise",
+    "message": "Consulte o status no Teleport:\n✅ Cálculo disponível: prossiga com transmissão e pagamento.\n⚠️ Cálculo indisponível: aguarde a análise.\n❌ Recusada: informe que a proposta não foi aprovada; o motivo não fica disponível.\n\nQual status aparece?",
+    "options": [
+      {
+        "label": "✅ Cálculo disponível",
+        "next": "prop_calc_disp"
+      },
+      {
+        "label": "⚠️ Cálculo indisponível",
+        "next": "prop_calc_indisp"
+      },
+      {
+        "label": "❌ Recusada",
+        "next": "prop_recusada"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "prop_aguardando_protocolo": {
+    "title": "Aguardando protocolo",
+    "message": "Consulte o status no Teleport:\n✅ Cálculo disponível: prossiga com transmissão e pagamento.\n⚠️ Cálculo indisponível: aguarde a análise.\n❌ Recusada: informe que a proposta não foi aprovada; o motivo não fica disponível.\n\nQual status aparece?",
+    "options": [
+      {
+        "label": "✅ Cálculo disponível",
+        "next": "prop_calc_disp"
+      },
+      {
+        "label": "⚠️ Cálculo indisponível",
+        "next": "prop_calc_indisp"
+      },
+      {
+        "label": "❌ Recusada",
+        "next": "prop_recusada"
+      },
+      {
+        "label": "Porto Seguro — Roxo/Laranja",
+        "next": "prop_porto_roxo"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "prop_calc_disp": {
+    "title": "✅ Cálculo disponível",
+    "message": null,
+    "options": [],
+    "final": "Prossiga com a transmissão e o pagamento.",
+    "note": null
+  },
+  "prop_calc_indisp": {
+    "title": "⚠️ Cálculo indisponível",
+    "message": null,
+    "options": [],
+    "final": "Aguarde a análise.",
+    "note": null
+  },
+  "prop_recusada": {
+    "title": "❌ Recusada",
+    "message": null,
+    "options": [],
+    "final": "Informe ao cliente que a proposta não foi aprovada; o motivo não fica disponível para consulta.",
+    "note": null
+  },
+  "prop_porto_roxo": {
+    "title": "Porto Seguro — Roxo/Laranja",
+    "message": null,
+    "options": [],
+    "final": "1. Confira a data da transmissão;\n2. Acesse Acompanhamento > Transmissões;\n3. Altere o filtro para EV;\n4. Localize o cálculo e selecione “Busca Protocolo”.",
+    "note": "O retorno pode levar até 72 horas, conforme o prazo operacional informado. Se a proposta estiver no portal e não no Teleport, use a Central de Importações."
+  },
+  "prop_duplicada": {
+    "title": "Proposta duplicada",
+    "message": "Já existe proposta para o mesmo chassi.\n\nHouve tentativa de transmissão?",
+    "options": [
+      {
+        "label": "Sim",
+        "next": "prop_dup_sim"
+      },
+      {
+        "label": "Não",
+        "next": "prop_dup_nao"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "prop_dup_sim": {
+    "title": "Proposta duplicada",
+    "message": null,
+    "options": [],
+    "final": "Consulte a proposta no portal e valide com Pós-venda.",
+    "note": "Não transmita novamente até identificar e manter somente a proposta correta."
+  },
+  "prop_dup_nao": {
+    "title": "Proposta duplicada",
+    "message": null,
+    "options": [],
+    "final": "Confirme com o segurado se houve contratação em outro local.",
+    "note": "Não transmita novamente até identificar e manter somente a proposta correta."
+  },
+  "prop_assinatura": {
+    "title": "Problema com assinatura",
+    "message": "Assinatura pendente?\n1. Confira telefone e e-mail;\n2. Verifique o status do envio;\n3. Se permitido, reenvie o link;\n4. Oriente o cliente a verificar Caixa de Entrada, Spam e Lixeira.\n\nO problema continua?",
+    "options": [
+      {
+        "label": "Sim, abrir suporte",
+        "next": "problemas_tecnicos"
+      },
+      {
+        "label": "Não",
+        "next": "prop_assinatura_ok"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "prop_assinatura_ok": {
+    "title": "Assinatura",
+    "message": null,
+    "options": [],
+    "final": "Problema resolvido.",
+    "note": null
+  },
+  "prop_apolice": {
+    "title": "Apólice ou boleto não gerado",
+    "message": "Apólice e boleto são gerados após a aceitação e emissão. Verifique pendências de vistoria, assinatura, pagamento, bônus ou documentos.\n\nA proposta continua pendente após o prazo informado?",
+    "options": [
+      {
+        "label": "Sim, Pós-venda",
+        "next": "prop_apolice_posvenda"
+      },
+      {
+        "label": "Não, acompanhar",
+        "next": "prop_apolice_acompanhar"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "prop_apolice_posvenda": {
+    "title": "Pós-venda",
+    "message": null,
+    "options": [],
+    "final": "Direcione o atendimento para a equipe de Pós-venda.",
+    "note": null
+  },
+  "prop_apolice_acompanhar": {
+    "title": "Acompanhar",
+    "message": null,
+    "options": [],
+    "final": "Continue acompanhando o prazo normalmente.",
+    "note": null
+  },
+  "prop_nao_aparece": {
+    "title": "Proposta não aparece no Teleport",
+    "message": "A proposta existe no portal da seguradora?",
+    "options": [
+      {
+        "label": "Sim",
+        "next": "prop_existe_portal"
+      },
+      {
+        "label": "Não",
+        "next": "prop_nao_existe_portal"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "prop_existe_portal": {
+    "title": "Proposta encontrada no portal",
+    "message": null,
+    "options": [],
+    "final": "Salve o PDF e acesse Acompanhamento > Central de Importações. Importe o documento, vincule a concessionária correta e envie para assinatura, quando aplicável.",
+    "note": "Para Porto Seguro, consulte “Busca Protocolo”. Para Allianz com cartão, aguarde a validação indicada no status."
+  },
+  "prop_nao_existe_portal": {
+    "title": "Proposta não encontrada",
+    "message": null,
+    "options": [],
+    "final": "Confirme a transmissão e a crítica apresentada.",
+    "note": null
+  },
+  "prop_cancelar": {
+    "title": "Cancelar proposta",
+    "message": "Deseja cancelar uma proposta ainda não emitida?\n\nAntes, verifique se a necessidade pode ser resolvida por correção. Se a apólice já foi emitida, a tratativa é de Pós-venda e pode exigir endosso ou cancelamento.\n\nConfirmar solicitação?",
+    "options": [
+      {
+        "label": "Sim, direcionar",
+        "next": "prop_cancelar_sim"
+      },
+      {
+        "label": "Não, voltar",
+        "next": "proposta"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "prop_cancelar_sim": {
+    "title": "Cancelamento",
+    "message": null,
+    "options": [],
+    "final": "Encaminhando a solicitação de cancelamento.",
+    "note": null
+  },
+  "usuario": {
+    "title": "Usuário",
+    "message": "Sobre o que você precisa de ajuda?",
+    "options": [
+      {
+        "label": "Login ou acesso",
+        "next": "usr_login"
+      },
+      {
+        "label": "Estrutura de venda",
+        "next": "usr_estrutura"
+      },
+      {
+        "label": "Suporte à Rede/Pós-venda",
+        "next": "usr_posvenda"
+      },
+      {
+        "label": "Suporte ao cliente final",
+        "next": "usr_cliente_final"
+      },
+      {
+        "label": "Pré-venda/Teleport",
+        "next": "usr_prevenda"
+      },
+      {
+        "label": "Campanhas",
+        "next": "campanhas"
+      },
+      {
+        "label": "Reset de senha",
+        "next": "usr_reset_senha"
+      },
+      {
+        "label": "Links úteis",
+        "next": "links_uteis"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "usr_login": {
+    "title": "Login ou acesso",
+    "message": "Qual sistema você precisa acessar?",
+    "options": [
+      {
+        "label": "Teleport",
+        "next": "usr_login_teleport"
+      },
+      {
+        "label": "Portal da seguradora",
+        "next": "usr_login_portal"
+      },
+      {
+        "label": "IHS",
+        "next": "usr_login_ihs"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "usr_login_teleport": {
+    "title": "Teleport",
+    "message": null,
+    "options": [],
+    "final": "Acesse o Teleport e escolha “Esqueci minha senha”. Use o link enviado por e-mail antes que expire.",
+    "note": "Para criar, excluir ou alterar usuário, envie ao gestor comercial regional: nome, CPF, e-mail, telefone, nascimento, código/nome da concessionária e perfil. Prazo informado: até 8 dias úteis."
+  },
+  "usr_login_portal": {
+    "title": "Portal da seguradora",
+    "message": null,
+    "options": [],
+    "final": "Acesse somente o portal oficial da seguradora com o usuário da corretora ou concessionária. Confirme acesso ativo e permissão do perfil.",
+    "note": "Para senha, indisponibilidade ou erro operacional, veja “Telefones e canais”."
+  },
+  "usr_login_ihs": {
+    "title": "IHS",
+    "message": null,
+    "options": [],
+    "final": "O acesso ao IHS é liberado pela concessionária. Solicite ao usuário master a criação ou liberação do login e do perfil. Após a liberação, use seu usuário individual.",
+    "note": "Para dúvidas de permissão, fale com o responsável interno pelo IHS."
+  },
+  "usr_estrutura": {
+    "title": "Estrutura de venda",
+    "message": null,
+    "options": [],
+    "final": "Para criar ou corrigir a estrutura de venda, contate o gestor F&I. Informe código do vendedor, concessionária, loja, filial e perfil.",
+    "note": "Confira antes de concluir: a estrutura incorreta pode afetar vínculo, relatórios e comissionamento."
+  },
+  "usr_posvenda": {
+    "title": "Suporte à Rede/Pós-venda",
+    "message": null,
+    "options": [],
+    "final": "Para apólice emitida, boleto, pagamento, endosso, cancelamento, vistoria ou renovação, contate o Pós-venda da Rede: (11) 5108-6288.",
+    "note": null
+  },
+  "usr_cliente_final": {
+    "title": "Suporte ao cliente final",
+    "message": null,
+    "options": [],
+    "final": "Para suporte ao segurado sobre contrato vigente, contate: (11) 2172-7007.",
+    "note": null
+  },
+  "usr_prevenda": {
+    "title": "Pré-venda/Teleport",
+    "message": null,
+    "options": [],
+    "final": "Este canal atende cotação, preenchimento, transmissão e dificuldades no Teleport.",
+    "note": "Para acesso, veja “Login ou acesso”. Para apólice emitida, veja “Suporte à Rede/Pós-venda”."
+  },
+  "usr_reset_senha": {
+    "title": "Reset de senha",
+    "message": "Qual senha deseja redefinir?",
+    "options": [
+      {
+        "label": "Allianz",
+        "next": "usr_reset_allianz"
+      },
+      {
+        "label": "Porto Seguro",
+        "next": "usr_reset_porto"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "usr_reset_allianz": {
+    "title": "Reset de senha — Allianz",
+    "message": null,
+    "options": [],
+    "final": "1. Contate o HelpDesk 4090-1155 ou o chat oficial;\n2. Solicite “Reset de senha do Usuário BA”;\n3. Após receber a senha provisória, acesse o Allianz Net e crie uma nova senha conforme as regras da tela.",
+    "note": null
+  },
+  "usr_reset_porto": {
+    "title": "Reset de senha — Porto Seguro",
+    "message": null,
+    "options": [],
+    "final": "1. No Corretor Online, escolha “Recuperar minha senha”;\n2. Informe o CPF;\n3. Use a senha temporária recebida por e-mail;\n4. Cadastre uma nova senha conforme as regras da tela.",
+    "note": "Nunca informe sua senha no atendimento."
+  },
+  "seguradoras": {
+    "title": "Seguradoras",
+    "message": "Qual seguradora deseja consultar?",
+    "options": [
+      {
+        "label": "Allianz",
+        "next": "seg_allianz"
+      },
+      {
+        "label": "HDI Seguros",
+        "next": "seg_hdi"
+      },
+      {
+        "label": "Porto Seguro",
+        "next": "seg_porto"
+      },
+      {
+        "label": "Suhai",
+        "next": "seg_suhai"
+      },
+      {
+        "label": "Tokio Marine",
+        "next": "seg_tokio"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "seg_allianz": {
+    "title": "Allianz",
+    "message": "Seguro auto com coberturas e serviços conforme o produto contratado.\n\nO que deseja consultar?",
+    "options": [
+      {
+        "label": "Coberturas",
+        "next": "seg_allianz_cob"
+      },
+      {
+        "label": "Pagamento",
+        "next": "seg_allianz_pag"
+      },
+      {
+        "label": "Canais",
+        "next": "seg_allianz_canais"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "seg_allianz_cob": {
+    "title": "Allianz — Coberturas",
+    "message": null,
+    "options": [],
+    "final": "Pode incluir cobertura compreensiva, danos a terceiros, vidros, acessórios, carro reserva e assistência 24h, conforme a proposta.\n\nConsulte as condições e limites antes de confirmar ao cliente.",
+    "note": null
+  },
+  "seg_allianz_canais": {
+    "title": "Allianz — Canais",
+    "message": null,
+    "options": [],
+    "final": "WhatsApp: (11) 4090-1110.",
+    "note": null
+  },
+  "seg_allianz_pag": {
+    "title": "Allianz — Pagamento",
+    "message": null,
+    "options": [],
+    "final": "• Boleto: até 4x sem juros;\n• Débito em conta: até 10x sem juros;\n• Cartão: até 10x sem juros.\n\nBandeiras e bancos aceitos devem ser confirmados na lista vigente antes da contratação.",
+    "note": null
+  },
+  "seg_hdi": {
+    "title": "HDI Seguros",
+    "message": "Seguro auto com coberturas e serviços conforme o produto contratado.\n\nO que deseja consultar?",
+    "options": [
+      {
+        "label": "Coberturas",
+        "next": "seg_hdi_cob"
+      },
+      {
+        "label": "Pagamento",
+        "next": "seg_hdi_pag"
+      },
+      {
+        "label": "Canais",
+        "next": "seg_hdi_canais"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "seg_hdi_cob": {
+    "title": "HDI Seguros — Coberturas",
+    "message": null,
+    "options": [],
+    "final": "Pode incluir cobertura compreensiva ou roubo/furto, danos a terceiros, vidros, acessórios, carro reserva e assistência 24h, conforme o produto.\n\nConsulte as condições e limites antes de confirmar ao cliente.",
+    "note": null
+  },
+  "seg_hdi_canais": {
+    "title": "HDI Seguros — Canais",
+    "message": null,
+    "options": [],
+    "final": "E-mail: atendimento.autoperfil@hdi.com.br.",
+    "note": null
+  },
+  "seg_hdi_pag": {
+    "title": "HDI — Pagamento",
+    "message": null,
+    "options": [],
+    "final": "• Boleto: 1x sem juros; 2x a 10x com juros;\n• Débito: até 6x sem juros; 7x a 10x com juros;\n• Cartão: até 10x sem juros;\n• PIX: indisponível.\n\nBandeiras aceitas devem ser confirmadas na lista vigente.",
+    "note": null
+  },
+  "seg_porto": {
+    "title": "Porto Seguro",
+    "message": "Seguro auto com coberturas e serviços conforme o produto contratado.\n\nO que deseja consultar?",
+    "options": [
+      {
+        "label": "Coberturas",
+        "next": "seg_porto_cob"
+      },
+      {
+        "label": "Pagamento",
+        "next": "seg_porto_pag"
+      },
+      {
+        "label": "Canais",
+        "next": "seg_porto_canais"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "seg_porto_cob": {
+    "title": "Porto Seguro — Coberturas",
+    "message": null,
+    "options": [],
+    "final": "Pode incluir cobertura compreensiva, danos a terceiros, vidros, acessórios, carro reserva e assistência 24h, conforme o produto.\n\nConsulte as condições e limites antes de confirmar ao cliente.",
+    "note": null
+  },
+  "seg_porto_canais": {
+    "title": "Porto Seguro — Canais",
+    "message": null,
+    "options": [],
+    "final": "WhatsApp: (11) 3003-9303.\nSinistros: portal Porto Seguro > Sinistros > Veículos.",
+    "note": null
+  },
+  "seg_porto_pag": {
+    "title": "Porto Seguro — Pagamento",
+    "message": null,
+    "options": [],
+    "final": "• Boleto: parcelamento com juros;\n• Débito: até 10x sem juros;\n• Cartão: até 10x sem juros.\n\nO cartão Porto do segurado pode ter condição específica. Confirme bandeiras, bancos, desconto e impacto no limite na regra vigente antes de contratar.",
+    "note": null
+  },
+  "seg_suhai": {
+    "title": "Suhai",
+    "message": "Seguro auto com coberturas e serviços conforme o produto contratado.\n\nO que deseja consultar?",
+    "options": [
+      {
+        "label": "Coberturas",
+        "next": "seg_suhai_cob"
+      },
+      {
+        "label": "Pagamento",
+        "next": "seg_suhai_pag"
+      },
+      {
+        "label": "Canais",
+        "next": "seg_suhai_canais"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "seg_suhai_cob": {
+    "title": "Suhai — Coberturas",
+    "message": null,
+    "options": [],
+    "final": "Foco em roubo e furto, com opções adicionais conforme o plano. A cobertura pode não incluir danos parciais.\n\nConsulte as condições e limites antes de confirmar ao cliente.",
+    "note": null
+  },
+  "seg_suhai_canais": {
+    "title": "Suhai — Canais",
+    "message": null,
+    "options": [],
+    "final": "• Atendimento e boletos: 3003-0335 ou 0800 784 2410 — dias úteis, 8h às 19h;\n• Roubo/furto: 3003-0335, opção 2 — 24h;\n• Perda total: 3003-0335, opção 2 — dias úteis, 9h às 18h;\n• Portal: Área do Cliente Suhai.",
+    "note": null
+  },
+  "seg_suhai_pag": {
+    "title": "Suhai — Pagamento",
+    "message": null,
+    "options": [],
+    "final": "• Boleto: até 3x sem juros;\n• Débito em conta: não disponível;\n• Cartão: não disponível.\n\nConfirme a condição vigente antes da contratação.",
+    "note": null
+  },
+  "seg_tokio": {
+    "title": "Tokio Marine",
+    "message": "Seguro auto com coberturas e serviços conforme o produto contratado.\n\nO que deseja consultar?",
+    "options": [
+      {
+        "label": "Coberturas",
+        "next": "seg_tokio_cob"
+      },
+      {
+        "label": "Pagamento",
+        "next": "seg_tokio_pag"
+      },
+      {
+        "label": "Canais",
+        "next": "seg_tokio_canais"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "seg_tokio_cob": {
+    "title": "Tokio Marine — Coberturas",
+    "message": null,
+    "options": [],
+    "final": "Pode incluir cobertura compreensiva, danos a terceiros, vidros, acessórios, carro reserva e assistência 24h, conforme o produto.\n\nConsulte as condições e limites antes de confirmar ao cliente.",
+    "note": null
+  },
+  "seg_tokio_canais": {
+    "title": "Tokio Marine — Canais",
+    "message": null,
+    "options": [],
+    "final": "• WhatsApp: (11) 99578-6546\n• Atendimento e sinistros: 0300 338 6546\n• SAC: 0800 703 9000\n• Acessibilidade: 0800 770 1523\n• Vidros: 0800 707 8005\n• Assistência 24h: 0800 318 6546",
+    "note": null
+  },
+  "seg_tokio_pag": {
+    "title": "Tokio Marine — Pagamento",
+    "message": null,
+    "options": [],
+    "final": "• Boleto: até 4x sem juros;\n• Débito: até 5x sem juros;\n• Cartão: até 12x sem juros.\n\nPode haver débito especial para bancos elegíveis. Confirme bandeiras, bancos e condições na regra vigente antes de contratar.",
+    "note": null
+  },
+  "produtos": {
+    "title": "Produtos",
+    "message": null,
+    "options": [],
+    "final": "• RCF: danos materiais, corporais ou morais causados a terceiros, conforme limites contratados;\n• APP: morte ou invalidez de ocupantes em acidente coberto, conforme limites contratados;\n• Condutor de 17 a 25 anos: deve ser informado quando utilizar o veículo, pois pode afetar aceitação e preço.",
+    "note": "Consulte as condições da proposta antes de confirmar a cobertura."
+  },
+  "telefones": {
+    "title": "Telefones e canais",
+    "message": "Selecione a seguradora ou o canal Honda Seguros:",
+    "options": [
+      {
+        "label": "Allianz",
+        "next": "tel_allianz"
+      },
+      {
+        "label": "HDI Seguros",
+        "next": "tel_hdi"
+      },
+      {
+        "label": "Porto Seguro",
+        "next": "tel_porto"
+      },
+      {
+        "label": "Suhai",
+        "next": "tel_suhai"
+      },
+      {
+        "label": "Tokio Marine",
+        "next": "tel_tokio"
+      },
+      {
+        "label": "Seguros Honda",
+        "next": "tel_honda"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "tel_allianz": {
+    "title": "Allianz",
+    "message": null,
+    "options": [],
+    "final": "WHATSAPP: (11) 4090-1110\nPORTAL: seguros.allianz.com.br/ngxecliente/public/home\nServiços: consulta de apólice, 2ª via de boletos e abertura de sinistros.\n\nAssistência vidros: 0800 701 1170\nAssistência 24h: 0800 010 0700\nHelpDesk: 4090-1155 / Chat: Chat Allianz Net",
+    "note": null
+  },
+  "tel_hdi": {
+    "title": "HDI Seguros",
+    "message": null,
+    "options": [],
+    "final": "WHATSAPP: (11) 5070-0700\nPortal do segurado: hdi.com.br/segurado\nServiços: assistência 24h, abertura e acompanhamento de sinistro, 2ª via de apólice e boleto.\n\nHelpDesk para corretores: 0800 728 9090 / WhatsApp: (11) 99524-8188",
+    "note": null
+  },
+  "tel_porto": {
+    "title": "Porto Seguro",
+    "message": null,
+    "options": [],
+    "final": "WHATSAPP: 3003-9303\nSITE: portoseguro.com.br\nServiços: 2ª via de apólice, 2ª via de boleto e acompanhamento de sinistro.\n\nSINISTROS E ASSISTÊNCIA 24H:\n• Grande São Paulo e Rio: 333-76786\n• Capitais e grandes centros: 4004-76786\n• Demais localidades: 0800 727 7477\n\nHelpDesk para corretores: 4004-2300",
+    "note": null
+  },
+  "tel_suhai": {
+    "title": "Suhai",
+    "message": null,
+    "options": [],
+    "final": "2ª VIA DE APÓLICE OU BOLETO: Capital 3003-0335 / Demais regiões 0800-784-2410\nSINISTRO (roubo/furto, perda total, colisão — atendimento 24h): Capital 3003-0335 / Demais regiões 0800-784-2410\nASSISTÊNCIA 24H: 0800-327-8424 (troca de pneu, guincho, auxílio mecânico)\nChat/site: suhaiseguradora.com",
+    "note": null
+  },
+  "tel_tokio": {
+    "title": "Tokio Marine",
+    "message": null,
+    "options": [],
+    "final": "WHATSAPP: (11) 99578-6546\nServiços: 2ª via de apólice, abertura e acompanhamento de sinistro, consulta de parcelas, termo de quitação, boletos e assistência.\n\nSINISTRO, VISTORIAS E ASSISTÊNCIA 24H: 0800 318 6546\nCentral de vidros: 0800 707 8005\nCentral carro reserva: 0800 709 2886",
+    "note": null
+  },
+  "tel_honda": {
+    "title": "Seguros Honda",
+    "message": "Selecione o perfil:",
+    "options": [
+      {
+        "label": "Concessionária",
+        "next": "tel_honda_concessionaria"
+      },
+      {
+        "label": "Cliente",
+        "next": "tel_honda_cliente"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "tel_honda_concessionaria": {
+    "title": "Seguros Honda — Concessionária",
+    "message": null,
+    "options": [],
+    "final": "VOZ: (11) 2172-7008\nServiços: pendências, 2ª via de apólice, 2ª via de boleto, abertura e acompanhamento de sinistro e endosso.",
+    "note": "Chat IHS: sem previsão de retorno, conforme comunicado."
+  },
+  "tel_honda_cliente": {
+    "title": "Seguros Honda — Cliente",
+    "message": null,
+    "options": [],
+    "final": "VOZ e WhatsApp: (11) 2172-7007\nServiços: pendências, 2ª via de apólice, 2ª via de boleto, abertura e acompanhamento de sinistro, endosso, cotação e renovação de apólice.",
+    "note": null
+  },
+  "problemas_tecnicos": {
+    "title": "Problemas Técnicos",
+    "message": "Posso ajudar com erros no Teleport, portal da seguradora, integração ou transmissão. Onde o problema acontece?",
+    "options": [
+      {
+        "label": "Teleport",
+        "next": "pt_teleport"
+      },
+      {
+        "label": "Portal da seguradora",
+        "next": "pt_portal"
+      },
+      {
+        "label": "Integração ou transmissão",
+        "next": "pt_integracao"
+      },
+      {
+        "label": "Divergência entre sistemas",
+        "next": "pt_divergencia"
+      },
+      {
+        "label": "Abrir chamado",
+        "next": "pt_abrir_chamado"
+      },
+      {
+        "label": "Acompanhar chamado",
+        "next": "pt_acompanhar_chamado"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "pt_teleport": {
+    "title": "Teleport",
+    "message": "Antes de abrir chamado, confira os campos obrigatórios, os dados do cliente e do veículo e a crítica exibida.\n\nO erro continua?",
+    "options": [
+      {
+        "label": "Sim",
+        "next": "pt_abrir_chamado"
+      },
+      {
+        "label": "Não",
+        "next": "pt_resolvido"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "pt_resolvido": {
+    "title": "Teleport",
+    "message": null,
+    "options": [],
+    "final": "Ótimo, problema resolvido.",
+    "note": null
+  },
+  "pt_portal": {
+    "title": "Portal da seguradora",
+    "message": "Selecione a seguradora:",
+    "options": [
+      {
+        "label": "Allianz",
+        "next": "pt_portal_allianz"
+      },
+      {
+        "label": "HDI",
+        "next": "pt_portal_hdi"
+      },
+      {
+        "label": "Porto Seguro",
+        "next": "pt_portal_porto"
+      },
+      {
+        "label": "Suhai",
+        "next": "pt_portal_suhai"
+      },
+      {
+        "label": "Tokio Marine",
+        "next": "pt_portal_tokio"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "pt_portal_allianz": {
+    "title": "Portal Allianz",
+    "message": null,
+    "options": [
+      {
+        "label": "Abrir chamado",
+        "next": "pt_abrir_chamado"
+      }
+    ],
+    "final": "Confira se o portal está correto, o usuário está ativo e a cotação ou proposta foi localizada.",
+    "note": "Portal: seguros.allianz.com.br/ngxecliente/public/home. Se o erro continuar, abra um chamado técnico."
+  },
+  "pt_portal_hdi": {
+    "title": "Portal HDI",
+    "message": null,
+    "options": [
+      {
+        "label": "Abrir chamado",
+        "next": "pt_abrir_chamado"
+      }
+    ],
+    "final": "Confira se o portal está correto, o usuário está ativo e a cotação ou proposta foi localizada.",
+    "note": "Portal do segurado: hdi.com.br/segurado. Se o erro continuar, abra um chamado técnico."
+  },
+  "pt_portal_porto": {
+    "title": "Portal Porto Seguro",
+    "message": null,
+    "options": [
+      {
+        "label": "Abrir chamado",
+        "next": "pt_abrir_chamado"
+      }
+    ],
+    "final": "Confira se o portal está correto, o usuário está ativo e a cotação ou proposta foi localizada.",
+    "note": "Portal: portoseguro.com.br. Se o erro continuar, abra um chamado técnico."
+  },
+  "pt_portal_suhai": {
+    "title": "Portal Suhai",
+    "message": null,
+    "options": [
+      {
+        "label": "Abrir chamado",
+        "next": "pt_abrir_chamado"
+      }
+    ],
+    "final": "Confira se o portal está correto, o usuário está ativo e a cotação ou proposta foi localizada.",
+    "note": "Portal: Área do Cliente Suhai (suhaiseguradora.com). Se o erro continuar, abra um chamado técnico."
+  },
+  "pt_portal_tokio": {
+    "title": "Portal Tokio Marine",
+    "message": null,
+    "options": [
+      {
+        "label": "Abrir chamado",
+        "next": "pt_abrir_chamado"
+      }
+    ],
+    "final": "Confira se o portal está correto, o usuário está ativo e a cotação ou proposta foi localizada.",
+    "note": "Se o erro continuar, abra um chamado técnico."
+  },
+  "pt_integracao": {
+    "title": "Integração ou transmissão",
+    "message": null,
+    "options": [],
+    "final": "Iremos direcionar seu atendimento para nosso especialista, aguarde um momento.",
+    "note": "A integração conecta o Teleport à seguradora. O retorno pode ser: transmitida, em análise, recusada, protocolo gerado, crítica de preenchimento ou erro de comunicação."
+  },
+  "pt_divergencia": {
+    "title": "Divergência entre sistemas",
+    "message": null,
+    "options": [],
+    "final": "Iremos direcionar seu atendimento para nosso especialista, aguarde um momento.",
+    "note": "Use esta opção quando Teleport e seguradora mostrarem dados diferentes, como status, proposta, veículo, cobertura, valor ou bônus."
+  },
+  "pt_abrir_chamado": {
+    "title": "Abrir chamado",
+    "message": null,
+    "options": [],
+    "final": "Para abrir o chamado, informe somente:\n• Código da concessionária;\n• Nome do solicitante;\n• Cotação ou proposta;\n• Seguradora;\n• Sistema e etapa;\n• Mensagem, data e horário;\n• Tentativas realizadas;\n• Print, se necessário.",
+    "note": "⚠️ Não envie senha, token ou dados completos de cartão."
+  },
+  "pt_acompanhar_chamado": {
+    "title": "Acompanhar chamado",
+    "message": null,
+    "options": [],
+    "final": "Digite o número do chamado recebido na abertura.\nExemplo: 582594",
+    "note": null
+  },
+  "campanhas": {
+    "title": "Campanhas",
+    "message": "Campanhas e treinamentos:\n• WhatsApp Hondinho: (11) 96579-6147\n• E-mail: treinamentohsf@honda.com.br\n\nO que deseja consultar?",
+    "options": [
+      {
+        "label": "Campanhas",
+        "next": "camp_campanhas"
+      },
+      {
+        "label": "Materiais",
+        "next": "camp_materiais"
+      },
+      {
+        "label": "Treinamentos",
+        "next": "camp_treinamentos"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "camp_campanhas": {
+    "title": "Campanhas",
+    "message": null,
+    "options": [],
+    "final": "Fale com o time de Campanhas pelo WhatsApp Hondinho (11) 96579-6147 ou e-mail treinamentohsf@honda.com.br.",
+    "note": null
+  },
+  "camp_materiais": {
+    "title": "Materiais",
+    "message": null,
+    "options": [],
+    "final": "Solicite materiais de apoio pelo WhatsApp Hondinho (11) 96579-6147 ou e-mail treinamentohsf@honda.com.br.",
+    "note": null
+  },
+  "camp_treinamentos": {
+    "title": "Treinamentos",
+    "message": null,
+    "options": [],
+    "final": "Consulte o portal oficial de treinamentos ou fale pelo WhatsApp Hondinho (11) 96579-6147.",
+    "note": null
+  },
+  "links_uteis": {
+    "title": "Links úteis",
+    "message": null,
+    "options": [],
+    "final": "• Teleport: honda.teleport.com.br/0\n• FIPE — consulta de veículos: veiculos.fipe.org.br\n• Correios — Busca CEP: buscacepinter.correios.com.br\n• SUSEP — portal oficial: gov.br/susep/pt-br\n• Treinamentos: portal oficial da operação\n• Corretora de Seguros Honda: corretoradeseguroshonda.com.br",
+    "note": "Utilize somente endereços oficiais."
+  },
+  "fale_atendente": {
+    "title": "Falar com o atendente",
+    "message": "Dentro ou fora do horário de atendimento?",
+    "options": [
+      {
+        "label": "Dentro do horário",
+        "next": "fale_dentro"
+      },
+      {
+        "label": "Fora do horário",
+        "next": "fale_fora"
+      }
+    ],
+    "final": null,
+    "note": null
+  },
+  "fale_dentro": {
+    "title": "Atendimento",
+    "message": null,
+    "options": [],
+    "final": "Transborda a interação para um atendente humano.",
+    "note": null
+  },
+  "fale_fora": {
+    "title": "Fora do horário",
+    "message": null,
+    "options": [],
+    "final": "Olá! Agradecemos o seu contato. Nossa central tem horário de atendimento de seg. à sex. das 09h às 18h. Por favor, entre em contato nestes horários!",
+    "note": null
+  }
+}
